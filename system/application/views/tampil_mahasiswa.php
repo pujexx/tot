@@ -4,12 +4,12 @@
     </tr>
 
     <?php
-    if (isset($mahasiswa)) {
+
         foreach ($mahasiswas as $mahasiswa) {
             echo "<tr><td>" . $mahasiswa['nim'] . "</td><td>" . $mahasiswa['nama'] . "</td>";
-            echo '<td>delete|<a href="' . site_url() . '/mahasiswa/delete/' . $mahasiswa['id'] . '" onclick="return confirm(\'Yakin\')">Delete</a></td></tr>';
+            echo '<td><a href="'.site_url().'/mahasiswa/form_update/'.$mahasiswa['id'].'">update</a>|<a href="' . site_url() . '/mahasiswa/delete/' . $mahasiswa['id'] . '" onclick="return confirm(\'Yakin\')">Delete</a></td></tr>';
         }
-    }
+    
     ?>
 </table>
 <?php echo anchor("mahasiswa/tambah", "Tambah"); ?>
