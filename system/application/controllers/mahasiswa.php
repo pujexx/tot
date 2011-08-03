@@ -35,6 +35,10 @@ class Mahasiswa extends Controller {
         }
         $this->load->view('form_mahasiswa');
     }
+    function delete($id){
+        $this->model_mahasiswa->delete($id);
+        redirect('mahasiswa');
+    }
 
 }
 
