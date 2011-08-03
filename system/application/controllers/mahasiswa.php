@@ -11,6 +11,9 @@ class Mahasiswa extends Controller {
         $data['mahasiswas']=$this->model_mahasiswa->get();
         $this->load->view('tampil_mahasiswa',$data);
     }
+    function tambah(){
+        
+    }
 
 }
 ?>
